@@ -1,0 +1,1 @@
+declaraciones -> declaracion declaraciones | ε | ; declaraciones
