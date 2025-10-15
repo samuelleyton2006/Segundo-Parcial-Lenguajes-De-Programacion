@@ -1,24 +1,16 @@
-grammar CRUD;
+S → C | R | U | D
+C → c t v
+R → r t w
+U → u t s w
+D → d t w
 
-programa: instruccion+ ;
-instruccion: crear
-           | leer
-           | actualizar
-           | eliminar ;
-crear: 'CREATE' 'INTO' tabla 'VALUES' '(' lista_valores ')' ;
-leer: 'READ' 'FROM' tabla ('WHERE' condicion)? ;
-actualizar: 'UPDATE' tabla 'SET' asignaciones ('WHERE' condicion)? ;
-eliminar: 'DELETE' 'FROM' tabla ('WHERE' condicion)? ;
+t → T
+v → V
+w → W
+s → S
 
-tabla: ID ;
-lista_valores: valor (',' valor)* ;
-valor: NUMBER | STRING ;
-asignaciones: asignacion (',' asignacion)* ;
-asignacion: ID '=' valor ;
-condicion: ID '=' valor ;
-
-// Tokens
-ID: [a-zA-Z_][a-zA-Z0-9_]* ;
-NUMBER: [0-9]+ ;
-STRING: '"' .*? '"' ;
-WS: [ \t\r\n]+ -> skip ;
+// T es nombre de tabla, V es lista de valores, W es condición, S es asignación
+T → t T | t
+V → v V | v
+W → w W | w
+S → s S | s
