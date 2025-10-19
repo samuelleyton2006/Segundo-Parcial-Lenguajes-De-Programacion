@@ -37,7 +37,7 @@ Esta gramática cumple con las condiciones para ser LL(1):
 
 1. **No tiene recursión izquierda**, ya que las producciones nunca comienzan con el mismo no terminal (por ejemplo, `E → E + T` fue reemplazada por `E → T Ep`).
 2. **Está factorizada a la izquierda**, es decir, no hay ambigüedad entre producciones que comienzan igual.
-3. Los conjuntos **FIRST** y **FOLLOW** de cada no terminal son disjuntos, lo que asegura que el parser pueda decidir la regla correcta con solo mirar el siguiente símbolo de entrada.
+3. Los conjuntos **PRIMEROS** y **SIGUIENTES** de cada no terminal son disjuntos, lo que asegura que el parser pueda decidir la regla correcta con solo mirar el siguiente símbolo de entrada.
 
 ---
 
@@ -46,7 +46,7 @@ Esta gramática cumple con las condiciones para ser LL(1):
 El analizador predictivo LL(1) se basa en los siguientes pasos:
 
 1. **Cargar la gramática** desde un archivo `.txt` (por ejemplo `gramatica_ll1.txt`).
-2. **Construir la tabla predictiva LL(1)** a partir de los conjuntos FIRST y FOLLOW.
+2. **Construir la tabla predictiva LL(1)** a partir de los conjuntos PRIMEROS y SIGUIENTES.
 3. **Analizar una cadena de entrada**, aplicando las producciones de la tabla hasta aceptar o rechazar la cadena.
 4. Mostrar mensajes detallados sobre cada paso del análisis.
 
