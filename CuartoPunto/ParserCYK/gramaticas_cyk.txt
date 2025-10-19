@@ -1,0 +1,13 @@
+S -> AB | CD | E
+A -> E1
+B -> +T
+C -> E1
+D -> -T
+E -> T
+T -> FG | H
+F -> F1
+G -> *F
+H -> F
+F1 -> (E)
+F -> num
+
