@@ -69,11 +69,8 @@ Salida:
 
 Para probar el analizador, usa la siguiente gramática:
 
-E -> T E'
-E' -> + T E' | - T E' | ε
-T -> F T'
-T' -> * F T' | / F T' | ε
-F -> ( E ) | num
+<img width="209" height="108" alt="image" src="https://github.com/user-attachments/assets/38e0d1c0-4759-43fb-8ec4-cf96e47d3b4e" />
+
 
 Esta gramática permite expresiones como:
 
