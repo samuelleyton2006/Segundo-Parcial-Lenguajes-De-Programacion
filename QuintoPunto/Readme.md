@@ -15,6 +15,8 @@ El programa sigue las siguientes etapas principales:
 ### 1️ Lectura de la gramática
 
 Se lee un archivo `gramatica.txt` con producciones del tipo:
+
+
 <img width="209" height="108" alt="image" src="https://github.com/user-attachments/assets/38e0d1c0-4759-43fb-8ec4-cf96e47d3b4e" />
 
 
