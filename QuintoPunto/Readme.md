@@ -78,9 +78,9 @@ num + num * num
 (num + num) * num
 num * num + num
 
-## Por qué esta es la solución al ejercicio?
+## Justificacion
 
-La tarea pedía “Diseñar e implementar un algoritmo de emparejamiento para el algoritmo descendente recursivo”, y este proyecto lo cumple porque:
+Esta solcuion cumple con lo requirido en el punto porque:
 
 1. Implementa un analizador LL(1) completo que usa PRIMEROS, SIGUIENTES y PREDICCIÓN para decidir qué regla aplicar.
 
