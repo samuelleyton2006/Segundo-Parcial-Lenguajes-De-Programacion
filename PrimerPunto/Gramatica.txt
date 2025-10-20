@@ -1,1 +1,27 @@
+<programa>          ::= <instruccion>*
+<instruccion>       ::= <crear_entidad> | <consultar_entidad> | <modificar_entidad> | <eliminar_entidad>
+
+<crear_entidad>     ::= "INICIAR" "ENTIDAD" <nombre_entidad> "(" <lista_atributos> ")"
+<lista_atributos>   ::= <atributo> (";" <atributo>)*
+<atributo>          ::= <nombre_atributo> <tipo_dato>
+
+<consultar_entidad> ::= "OBTENER" "ENTIDAD" <nombre_entidad> [ "CONDICION" <expresion_condicion> ]
+
+<modificar_entidad> ::= "CAMBIAR" <nombre_entidad> "CON" <lista_modificaciones> [ "CONDICION" <expresion_condicion> ]
+<lista_modificaciones> ::= <modificacion> (";" <modificacion>)*
+<modificacion>      ::= <nombre_atributo> "=" <valor>
+
+<eliminar_entidad>  ::= "BORRAR" "ENTIDAD" <nombre_entidad> [ "CONDICION" <expresion_condicion> ]
+
+<expresion_condicion> ::= <nombre_atributo> <operador_comparacion> <valor>
+<operador_comparacion> ::= "==" | "!=" | "<" | ">" | "<=" | ">="
+
+<valor>             ::= <texto> | <numero> | <nombre_atributo>
+
+<tipo_dato>         ::= "NUMERO" | "TEXTO" | "DECIMAL" | "BOOLEANO"
+
+<nombre_entidad>    ::= [a-zA-Z_][a-zA-Z0-9_]*
+<nombre_atributo>   ::= [a-zA-Z_][a-zA-Z0-9_]*
+<texto>             ::= '"' .* '"'
+<numero>            ::= [0-9]+
 declaraciones -> declaracion declaraciones | ε | ; declaraciones
