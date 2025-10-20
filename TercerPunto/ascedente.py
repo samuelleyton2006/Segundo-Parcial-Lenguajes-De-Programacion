@@ -1,14 +1,6 @@
 import sys
 from collections import defaultdict
 
-# Tablas ACTION (mapeo_acciones) y GOTO para la gramática
-# Gramática (producciones numeradas):
-# 1: E -> E + T
-# 2: E -> T
-# 3: T -> T * F
-# 4: T -> F
-# 5: F -> ( E )
-# 6: F -> id
 
 # Mapeo de acciones: Por cada estado (0-11), define las acciones a hacer dependiendo del simbolo
 
@@ -64,23 +56,23 @@ def crear_simbolo_inicial(gramatica, inicial):
 def tokenize(expr):
     # Tokenizador simple para la expresion de entrada
     import re
-    raw = re.findall(r"id|[a-zA-Z_]\w*|\+|\*|\(|\)", expr)
+    # también capturamos cualquier otro carácter no espacial como 
+    # token (p. ej. '-' u otros) para no ignorarlos accidentalmente
+    raw = re.findall(r"id|[a-zA-Z_]\w*|\+|\*|\(|\)|\S", expr)
     tokens = []
     for t in raw:
         if re.fullmatch(r"\+|\*|\(|\)", t):
             tokens.append(t)
-        else:
+        elif re.fullmatch(r"id|[a-zA-Z_]\w*", t):
+            # cualquier identificador se mapea al token 'id'
             tokens.append('id')
+        else:
+            # token desconocido (por ejemplo '-') lo dejamos tal cual
+            tokens.append(t)
     return tokens
 
 
 def parse_with_stack(tokens, verbose=True):
-    """Parser ascendente que usa pila de estados y pila de símbolos.
-    Usa las tablas `mapeo_acciones` y `GOTO` definidas arriba.
-    Tokens debe ser una lista sin el marcador '$' (se añade internamente).
-    Devuelve True si acepta, False/lanza error en otro caso.
-    Imprime la traza si verbose=True.
-    """
     producciones = {
         1: ('E', ['E', '+', 'T']),
         2: ('E', ['T']),
