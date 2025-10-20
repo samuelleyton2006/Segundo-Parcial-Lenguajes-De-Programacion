@@ -65,6 +65,35 @@ Salida:
 
 <img width="357" height="605" alt="image" src="https://github.com/user-attachments/assets/98e2bcc9-867a-4972-8e7e-a0b014fea87c" />
 
+## Gramática de calculadora (archivo gramatica.txt)
 
+Para probar el analizador, usa la siguiente gramática:
+
+E -> T E'
+E' -> + T E' | - T E' | ε
+T -> F T'
+T' -> * F T' | / F T' | ε
+F -> ( E ) | num
+
+Esta gramática permite expresiones como:
+
+num + num * num
+(num + num) * num
+num * num + num
+
+## Por qué esta es la solución al ejercicio?
+
+La tarea pedía “Diseñar e implementar un algoritmo de emparejamiento para el algoritmo descendente recursivo”, y este proyecto lo cumple porque:
+
+1. Implementa un analizador LL(1) completo que usa PRIMEROS, SIGUIENTES y PREDICCIÓN para decidir qué regla aplicar.
+
+2. Contiene una función emparejar() que verifica y consume tokens según la producción activa.
+
+3. El proceso es descendente y recursivo, siguiendo la estructura natural de la gramática.
+
+4. Permite probar cualquier gramática (no recursiva por la izquierda) simplemente modificando el archivo gramatica.txt.
+
+**En resumen**:
+Este código traduce la teoría del análisis sintáctico descendente recursivo en una implementación práctica que demuestra el proceso de emparejamiento y derivación de cadenas.
 
 
