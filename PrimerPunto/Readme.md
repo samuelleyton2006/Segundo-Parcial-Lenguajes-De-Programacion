@@ -1,5 +1,3 @@
-Aquí tienes un README listo para GitHub que explica el funcionamiento del lenguaje CRUD basado en la gramática en español que diseñamos, junto con detalles de la gramática y uso general. Este texto es ideal para documentar tu proyecto en un repositorio.
-
 ***
 
 # Lenguaje CRUD en español - Gramática y Analizador
@@ -95,17 +93,3 @@ BORRAR ENTIDAD Persona CONDICION activo == false
 Este proyecto es una base para aprender diseño e implementación de lenguajes de programación con gramáticas personalizadas. Se pueden agregar características como manejo de errores, tipos más complejos o integración con bases de datos reales.
 
 ***
-
-Este README te ayudará a documentar claramente tu proyecto y explicar su diseño y uso con un lenguaje CRUD en español basado en una gramática customizada. Si deseas, puedo ayudarte a generar los archivos de ejemplo o código para pruebas.
-
-Sources
-[1] Lenguaje de programación de código abierto para latinos ... https://github.com/lenguaje-latino/latino
-[2] fernandocar86/seminario-gramaticas-formales https://github.com/fernandocar86/seminario-gramaticas-formales
-[3] lenguaje-de-programacion https://github.com/topics/lenguaje-de-programacion?l=c
-[4] CarlosSanabriaM/Compilador https://github.com/CarlosSanabriaM/Compilador
-[5] Jocagi/ProyectoLFYA: Proyecto del curso Lenguajes ... https://github.com/Jocagi/ProyectoLFYA
-[6] Lunfardo es un lenguaje de programación esotérico ... https://github.com/WhiteHeadbanger/Lunfardo
-[7] PabloMuralles/Compiladores https://github.com/PabloMuralles/Compiladores
-[8] Truco para Documentación Rápida en GitHub https://www.tiktok.com/@midudev/video/7521379381806173462
-[9] Matiascba27/guias-y-recursos-programacion https://github.com/Matiascba27/guias-y-recursos-programacion
-[10] 5 Markdown - lenguaje de marcado https://gf0604-procesamientodatosgeograficos.github.io/2023-i/05-markdown.html
