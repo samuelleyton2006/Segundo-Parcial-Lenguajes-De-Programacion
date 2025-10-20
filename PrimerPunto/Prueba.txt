@@ -1,4 +1,0 @@
-CREATE INTO empleados VALUES (1, "Ana", 24)
-READ FROM empleados WHERE id=1
-UPDATE empleados SET nombre="Luis" WHERE id=2
-DELETE FROM empleados WHERE id=3
