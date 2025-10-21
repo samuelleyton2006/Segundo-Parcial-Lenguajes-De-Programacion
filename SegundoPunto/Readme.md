@@ -38,8 +38,8 @@ BORRAR ENTIDAD Persona CONDICION activo == false
 ├── Crud.g4                 # Archivo con la gramática ANTLR4
 ├── main.py                 # Programa principal en Python
 ├── README.md               # Documentación del proyecto
-├── Ejemplos/
-│   └── ejemplo1.crud       # Ejemplo de código fuente en el lenguaje Crud
+├── Ejemplo.crud
+│ 
 └── Archivos generados por ANTLR:
     ├── CrudLexer.py
     ├── CrudParser.py
