@@ -1,4 +1,4 @@
-grammar CrudEspañol;
+grammar Crud;
 
 options {
     language = Python3;
