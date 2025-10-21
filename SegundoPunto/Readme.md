@@ -77,7 +77,7 @@ Esto generará archivos *Lexer*, *Parser* y *Listener* necesarios para interpret
 ### 3. Ejecutar el programa
 
 ```bash
-python main.py Ejemplos/ejemplo1.crud
+python main.py Ejemplo.crud
 ```
 
 El programa imprimirá el **árbol sintáctico** correspondiente al código ejecutado.
