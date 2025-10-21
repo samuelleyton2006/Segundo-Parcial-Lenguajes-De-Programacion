@@ -1,6 +1,6 @@
 from antlr4 import *
-from CrudEspañolLexer import CrudEspañolLexer
-from CrudEspañolParser import CrudEspañolParser
+from CrudLexer import CrudLexer
+from CrudParser import CrudParser
 import sys
 
 def main():
@@ -11,9 +11,9 @@ def main():
     archivo = sys.argv[1]
     input_stream = FileStream(archivo, encoding='utf-8')
 
-    lexer = CrudEspañolLexer(input_stream)
+    lexer = CrudLexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = CrudEspañolParser(stream)
+    parser = CrudParser(stream)
     
     tree = parser.programa()
     print(tree.toStringTree(recog=parser))
