@@ -1,0 +1,4 @@
+INICIAR ENTIDAD Persona (nombre TEXTO; edad NUMERO; activo BOOLEANO)
+OBTENER ENTIDAD Persona CONDICION edad >= 18
+CAMBIAR Persona CON nombre = "Luis"; activo = true CONDICION nombre == "Juan"
+BORRAR ENTIDAD Persona CONDICION activo == false
